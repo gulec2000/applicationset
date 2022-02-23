@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: guestbook-ui
+  name: guestbook-prod
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: guestbook-ui
+      app: guestbook-prod
   template:
     metadata:
       labels:
-        app: guestbook-ui
+        app: guestbook-prod
     spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
